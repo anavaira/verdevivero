@@ -17,6 +17,8 @@ function App() {
         >
           Learn React
         </a>
+        <br></br>
+        <h1>Soy COMETA WOOF WOOF &#128021;</h1>
       </header>
     </div>
   );
