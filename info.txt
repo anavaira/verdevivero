@@ -1,0 +1,11 @@
+empaquetador: webpack
+traspilador: babel
+componentes: son funciones que arrancan en mayúscula (para que el compilador entienda si es una etiqueta html o un componente) y su ppal función es mostrar algo en pantalla usando su retorno
+const App = () => {}
+o
+function App () {}
+
+destructurig: 
+const arr = [1,2,3]
+
+const obj = {x:1,y:2,z:3}

@@ -1,27 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/NavBar";
+import Main from "./Main";
+import Footer from "./Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <br></br>
-        <h1>Soy COMETA WOOF WOOF &#128021;</h1>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <>
+            <NavBar />
+            <Main />
+            <Footer />            
+        </>
+    )
+};
 
 export default App;
+
+//en general retorna otro componente o "etiquetas HTML"
+//lo que no puedo hacer es con un solo retorno devolver elementos adyacentes, por regla podés retornar un solo elemento
