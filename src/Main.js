@@ -4,7 +4,9 @@ const Main = () => {
     return ( 
         <main>
             <h2>Home</h2>
-            <ItemListContainer />
+            <ItemListContainer 
+                grettings="Bienvenide a nuestra tienda on-line"
+            />
         </main>
      );
 }

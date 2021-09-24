@@ -1,6 +1,6 @@
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
     return ( 
-        <p>Un mensaje en pantalla.</p>
+        <p>{props.grettings}</p>
      );
 }
  
