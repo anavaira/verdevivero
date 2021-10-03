@@ -1,6 +1,11 @@
+import ItemList from "./ItemList";
+
 const ItemListContainer = (props) => {
     return ( 
-        <p>{props.grettings}</p>
+        <>
+            <p>{props.grettings}</p>
+            <ItemList />
+        </>
      );
 }
  
