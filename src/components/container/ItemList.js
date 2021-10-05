@@ -1,10 +1,7 @@
 import Item from "./Item";
 
-const ItemList = () => {
-    return (
-        //tiene que hacer un map() para obtener un array del que extraer losp rops para crear cada item
-        <Item key="" id="" title="" price="" pictureUrl=""/>
-    )
-}
+const ItemList = ({items}) => items.map((item) => {
+    return (<Item key={item.id} id={item.id} title={item.name} price={item.price} pictureUrl={item.pictureUrl}/>)
+});
 
 export default ItemList;
