@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 
-const task = new Promise( (resolve, rejected) => {
+const GetItems = new Promise( (resolve, rejected) => {
     const products = [
         {
             id: 1,
@@ -55,18 +55,17 @@ const task = new Promise( (resolve, rejected) => {
     setTimeout (() => products ? resolve(products) : rejected(console.log('Rechazado')), 2000);
 });
 
-const ItemListContainer = (props) => {
+const ItemDetailContainer = () => {
     const [products, setProducts] = useState([])
-    task.then(p => setProducts(p))
+    GetItems.then(p => setProducts(p))
 
-    //tener acá la promesa y que devuelva un array con nuestros productos
-    // usar el state y el use effect 
     return ( 
         <>
-            <p>{props.grettings}</p>
-            <ItemList items={products}/>
+            {/* ejemplo con el item 2, porque no sé de dónde sacar el id */}
+            <ItemDetail items={products} id={2}/> 
         </>
     );
-}
- 
-export default ItemListContainer;
+
+};
+
+export default ItemDetailContainer
