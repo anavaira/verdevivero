@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ItemDetail from "./ItemDetail";
 
 const GetItems = new Promise( (resolve, rejected) => {
@@ -56,16 +56,18 @@ const GetItems = new Promise( (resolve, rejected) => {
 });
 
 const ItemDetailContainer = () => {
-    const [products, setProducts] = useState([])
-    GetItems.then(p => setProducts(p))
+    const [products, setProducts] = useState(null)
+
+    useEffect(()=>{
+        GetItems.then(p => setProducts(p))
+    })
 
     return ( 
         <>
-            {/* ejemplo con el item 2, porque no sé de dónde sacar el id */}
-            <ItemDetail items={products} id={2}/> 
+            {()=> products ? <ItemDetail items={products} id={2} /> : <h2>Cargando</h2>}
         </>
     );
 
-};
+}
 
 export default ItemDetailContainer

@@ -12,6 +12,13 @@ const App = () => {
     )
 };
 
+// 1. instalar react-router-dom
+//     npm install react-router-dom
+// 2. Configurar el router
+// 3. Configuerar los links en la NavBar
+// 4. Agregar botones para ver el detalle de los items
+// 5. En el ItemDetail usar useParams()
+
 export default App;
 
 //en general retorna otro componente o "etiquetas HTML"
