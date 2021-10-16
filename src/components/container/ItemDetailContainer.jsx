@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
+
 
 const GetItems = new Promise( (resolve, rejected) => {
     const products = [
@@ -56,6 +58,10 @@ const GetItems = new Promise( (resolve, rejected) => {
 });
 
 const ItemDetailContainer = () => {
+
+    const resultado = useParams();
+    console.log(resultado)
+
     const [products, setProducts] = useState(null)
 
     useEffect(()=>{
@@ -64,7 +70,7 @@ const ItemDetailContainer = () => {
 
     return ( 
         <>
-            {()=> products ? <ItemDetail items={products} id={2} /> : <h2>Cargando</h2>}
+            {()=> products ? <ItemDetail items={products} id={resultado.match} /> : <h2>Cargando</h2>}
         </>
     );
 

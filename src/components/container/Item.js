@@ -1,4 +1,6 @@
 import ItemCount from "./ItemCount";
+import {Link} from "react-router-dom";
+
 
 const Item = ({key, id, title, price, pictureUrl, stock}) => {
     const onAdd = () => {
@@ -10,9 +12,8 @@ const Item = ({key, id, title, price, pictureUrl, stock}) => {
             <img src={pictureUrl}></img>
             <h2>{title}</h2>
             <h3>${price}</h3>
-            {/* <button productKey={key}>Más información</button> */}
+            <button><Link to={`/products/${id}`}>Más información</Link></button>
             <ItemCount stock={stock} initial="1" onAdd={onAdd}/>
-            {/* <link to={`/detailes/{id}`}></link> */}
         </div>
 
     );
