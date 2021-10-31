@@ -59,18 +59,24 @@ const GetItems = new Promise( (resolve, rejected) => {
 
 const ItemDetailContainer = () => {
 
-    const resultado = useParams();
-    console.log(resultado)
+    const id = useParams().id;
+    console.log(2000, id)
 
     const [products, setProducts] = useState(null)
 
     useEffect(()=>{
         GetItems.then(p => setProducts(p))
-    })
+    }, [id]);
+
+    const productFiltered = products.filter(function (el) {
+        return el.id = id
+    });
+
+    console.log (1000, productFiltered)
 
     return ( 
         <>
-            {()=> products ? <ItemDetail items={products} id={resultado.match} /> : <h2>Cargando</h2>}
+            {products ? <ItemDetail items={productFiltered} /> : <h2>Cargando</h2>}
         </>
     );
 

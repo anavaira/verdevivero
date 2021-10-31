@@ -12,8 +12,8 @@ const App = () => {
             {/* <Main /> */}
             < >
                 <Switch>
-                    <Route path="/" component={Main}/>
-                    <Route path="/products" component={ItemListContainer}/>
+                    <Route exact path="/" component={Main}/>
+                    <Route path="/products/all" component={ItemListContainer}/>
                     <Route path="/products/:id" component={ItemDetailContainer}/>
                 </Switch>
             </>

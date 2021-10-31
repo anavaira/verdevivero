@@ -3,10 +3,10 @@ const ItemDetail = ({items,id}) => {
         return (
         <>
         <div className="itemDetail">
-            <img src={items[id].pictureUrl}></img>
-            <h2>Detalle de {items[id].name}</h2>
-            <h3>${items[id].price}</h3>
-            <p>{items[id].description}</p>
+            <img src={items.pictureUrl}></img>
+            <h2>Detalle de {items.name}</h2>
+            <h3>${items.price}</h3>
+            <p>{items.description}</p>
         </div>
         </>
         )
